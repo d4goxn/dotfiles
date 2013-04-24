@@ -35,3 +35,6 @@ filetype indent on
 set ofu=syntaxcomplete#Complete
 
 call pathogen#infect()
+
+" Prevent Markdown files from automaticaly folding
+set nofoldenable
