@@ -29,6 +29,9 @@ endif
 
 au BufRead,BufNewFile *.md set filetype=Markdown
 
+nnoremap <F12>f :exe ':silent !firefox %'<CR>
+nnoremap <F12>c :exe ':silent !chromium-browser %'<CR>
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -38,3 +41,6 @@ call pathogen#infect()
 
 " Prevent Markdown files from automaticaly folding
 set nofoldenable
+
+set et!
+ret!
