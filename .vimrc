@@ -4,11 +4,11 @@ set noexpandtab
 set tabstop=4 shiftwidth=4
 set encoding=utf8 ffs=unix,dos,mac
 set ruler noerrorbells novisualbell noswapfile nobackup nowb smarttab number
-set foldmethod=syntax
-set foldlevel=99
 
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 0
+
+let g:vim_markdown_folding_disabled=1
 
 " Ctrl-h to toggle search higlighting.
 nnoremap <C-h> :set hls!
@@ -38,9 +38,3 @@ filetype indent on
 set ofu=syntaxcomplete#Complete
 
 call pathogen#infect()
-
-" Prevent Markdown files from automaticaly folding
-set nofoldenable
-
-set et!
-ret!
