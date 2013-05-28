@@ -30,6 +30,9 @@ endif
 au BufRead,BufNewFile *.md set filetype=Markdown
 au BufRead,BufNewFile *.ctrl set filetype=php
 
+nnoremap <F12>f :exe ':silent !firefox %'<CR>
+nnoremap <F12>c :exe ':silent !chromium-browser %'<CR>
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
