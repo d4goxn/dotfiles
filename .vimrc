@@ -28,6 +28,7 @@ if has("gui_running")
 endif
 
 au BufRead,BufNewFile *.md set filetype=Markdown
+au BufRead,BufNewFile *.ctrl set filetype=php
 
 " Enable filetype plugins
 filetype plugin on
