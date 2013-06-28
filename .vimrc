@@ -1,4 +1,6 @@
-colorscheme desert
+let g:molokai_original=1
+colorscheme molokai
+
 autocmd BufNewFile, BufRead * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set expandtab
 set tabstop=2 shiftwidth=2
