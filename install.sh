@@ -4,6 +4,9 @@
 npm install -g git://github.com/stubbornella/csslint.git csslint &&
 npm install -g less git://github.com/zaach/jsonlint.git jsonlint &&
 
+# jshint
+npm install -g jshint
+
 # C
 # CPP
 # PHP
