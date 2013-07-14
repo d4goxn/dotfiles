@@ -2,8 +2,8 @@ let g:molokai_original=1
 colorscheme molokai
 
 autocmd BufNewFile, BufRead * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-set expandtab
-set tabstop=2 shiftwidth=2
+set noexpandtab
+set tabstop=4 shiftwidth=4
 set encoding=utf8 ffs=unix,dos,mac
 set ruler noerrorbells novisualbell noswapfile nobackup nowb smarttab number
 

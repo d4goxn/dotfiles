@@ -1,1 +1,1 @@
-set sw=2 sts=2 et
+set sw=4 sts=4 noet
