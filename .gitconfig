@@ -1,3 +1,5 @@
 [user]
 	name = Dan Ross
 	email = ross9885@gmail.com
+[color]
+	ui = true
