@@ -35,6 +35,10 @@ au BufRead,BufNewFile *.ctrl set filetype=php
 nnoremap <F12>f :exe ':silent !firefox %'<CR>
 nnoremap <F12>c :exe ':silent !chromium-browser %'<CR>
 
+" Go lang
+set runtimepath+=$GOROOT/misc/vim
+
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on

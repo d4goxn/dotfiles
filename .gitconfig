@@ -3,3 +3,5 @@
 	email = ross9885@gmail.com
 [color]
 	ui = true
+[core]
+	editor = gvim
