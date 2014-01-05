@@ -45,6 +45,7 @@
 'Tlist_WinHeight'	taglist.txt	/*'Tlist_WinHeight'*
 'Tlist_WinWidth'	taglist.txt	/*'Tlist_WinWidth'*
 'loaded_nerd_tree'	NERD_tree.txt	/*'loaded_nerd_tree'*
+:EditorConfigReload	editorconfig.txt	/*:EditorConfigReload*
 :NERDTree	NERD_tree.txt	/*:NERDTree*
 :NERDTreeClose	NERD_tree.txt	/*:NERDTreeClose*
 :NERDTreeFind	NERD_tree.txt	/*:NERDTreeFind*
@@ -89,6 +90,7 @@ ConqueTerm_StartMessages	conque_term.txt	/*ConqueTerm_StartMessages*
 ConqueTerm_Syntax	conque_term.txt	/*ConqueTerm_Syntax*
 ConqueTerm_TERM	conque_term.txt	/*ConqueTerm_TERM*
 ConqueTerm_ToggleKey	conque_term.txt	/*ConqueTerm_ToggleKey*
+EditorConfig#AddNewHook()	editorconfig.txt	/*EditorConfig#AddNewHook()*
 NERDTree	NERD_tree.txt	/*NERDTree*
 NERDTree-?	NERD_tree.txt	/*NERDTree-?*
 NERDTree-A	NERD_tree.txt	/*NERDTree-A*
@@ -182,6 +184,18 @@ conque-term-usage	conque_term.txt	/*conque-term-usage*
 conque-term-windows	conque_term.txt	/*conque-term-windows*
 conque-term-write	conque_term.txt	/*conque-term-write*
 conque-term-writeln	conque_term.txt	/*conque-term-writeln*
+editorconfig-advanced	editorconfig.txt	/*editorconfig-advanced*
+editorconfig-commands	editorconfig.txt	/*editorconfig-commands*
+editorconfig-contents	editorconfig.txt	/*editorconfig-contents*
+editorconfig-hook	editorconfig.txt	/*editorconfig-hook*
+editorconfig-installation	editorconfig.txt	/*editorconfig-installation*
+editorconfig-overview	editorconfig.txt	/*editorconfig-overview*
+editorconfig-settings	editorconfig.txt	/*editorconfig-settings*
+editorconfig.txt	editorconfig.txt	/*editorconfig.txt*
+g:EditorConfig_core_mode	editorconfig.txt	/*g:EditorConfig_core_mode*
+g:EditorConfig_exec_path	editorconfig.txt	/*g:EditorConfig_exec_path*
+g:EditorConfig_python_files_dir	editorconfig.txt	/*g:EditorConfig_python_files_dir*
+g:EditorConfig_verbose	editorconfig.txt	/*g:EditorConfig_verbose*
 taglist-commands	taglist.txt	/*taglist-commands*
 taglist-debug	taglist.txt	/*taglist-debug*
 taglist-extend	taglist.txt	/*taglist-extend*

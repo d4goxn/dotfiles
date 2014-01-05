@@ -36,12 +36,11 @@ nnoremap <F12>f :exe ':silent !firefox %'<CR>
 nnoremap <F12>c :exe ':silent !chromium-browser %'<CR>
 
 " Go lang
+filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 
-
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 set ofu=syntaxcomplete#Complete
 
 call pathogen#infect()

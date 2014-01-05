@@ -21,7 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-xmodmap $HOME/.xmodmap
+#xmodmap $HOME/.Xmodmap
 
 export CHROME_BIN=/usr/bin/chromium-browser
 export NODE_ENV=development
+export GOROOT=/usr/local/go

@@ -5,3 +5,5 @@
 	ui = true
 [core]
 	editor = gvim
+[push]
+	default = simple
