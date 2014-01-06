@@ -1,3 +1,4 @@
+set nocompatible
 let g:molokai_original=1
 colorscheme molokai
 
@@ -29,18 +30,32 @@ if has("gui_running")
 	set guioptions-=lrb
 endif
 
-au BufRead,BufNewFile *.md set filetype=Markdown
-au BufRead,BufNewFile *.ctrl set filetype=php
+" Configure vundle before turning on filetype rules
+filetype plugin indent off
 
-nnoremap <F12>f :exe ':silent !firefox %'<CR>
-nnoremap <F12>c :exe ':silent !chromium-browser %'<CR>
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle. Required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'plasticboy/vim-markdown'
+Bundle 'othree/html5.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'pangloss/vim-javascript'
+Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-fugitive'
+Bundle 'junegunn/vim-easy-align'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'mintplant/vim-literate-coffeescript'
+Bundle 'mklabs/grunt.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'gkz/vim-ls'
+Bundle 'lunaru/vim-twig'
 
 " Go lang
-filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 
 " Enable filetype plugins
 filetype plugin indent on
 set ofu=syntaxcomplete#Complete
-
-call pathogen#infect()
