@@ -3,6 +3,7 @@ let g:molokai_original=1
 colorscheme molokai
 
 autocmd BufNewFile, BufRead * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 set noexpandtab
 set tabstop=4 shiftwidth=4
 set encoding=utf8 ffs=unix,dos,mac
@@ -52,10 +53,14 @@ Bundle 'mklabs/grunt.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'gkz/vim-ls'
 Bundle 'lunaru/vim-twig'
+Bundle 'scrooloose/syntastic'
+Bundle 'editorconfig/editorconfig-vim'
 
 " Go lang
 set runtimepath+=$GOROOT/misc/vim
 
 " Enable filetype plugins
 filetype plugin indent on
+au BufRead,BufNewFile *.ls set syntax=ls
+
 set ofu=syntaxcomplete#Complete

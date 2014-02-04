@@ -113,9 +113,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export $(gnome-keyring-daemon --daemonize --start)
+
 export NPM_PACKAGES=$HOME/npm
 export NODE_PATH=$NPM_PACKAGES/lib/node_modules:/usr/bin/node
-export PATH=/home/dan/bin:$NPM_PACKAGES/bin:$PATH
+export PATH=/home/dan/bin:$NPM_PACKAGES/bin:$HOME/.gem/ruby/1.9.1/bin:/bin:$PATH
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -126,6 +128,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
 # Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
 #
+
+# Gunt completion
+eval "$(grunt --completion=bash)"
 
 COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}
 COMP_WORDBREAKS=${COMP_WORDBREAKS/@/}
