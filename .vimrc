@@ -34,7 +34,7 @@ endif
 " Configure vundle before turning on filetype rules
 filetype plugin indent off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " let Vundle manage Vundle. Required! 
@@ -55,6 +55,7 @@ Bundle 'gkz/vim-ls'
 Bundle 'lunaru/vim-twig'
 Bundle 'scrooloose/syntastic'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'joonty/vim-xdebug.git'
 
 " Go lang
 set runtimepath+=$GOROOT/misc/vim
