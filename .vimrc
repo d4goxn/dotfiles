@@ -2,7 +2,10 @@ set nocompatible
 let g:molokai_original=1
 colorscheme molokai
 
-autocmd BufNewFile, BufRead * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd BufNewFile, BufRead * setlocal formatoptions-=c formatoptions-=r formatoptions-=o formatoptions+=j formatoptions+=n
+
+" Strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 set noexpandtab
 set tabstop=4 shiftwidth=4
@@ -37,7 +40,7 @@ filetype plugin indent off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
-" let Vundle manage Vundle. Required! 
+" let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
 
 Bundle 'plasticboy/vim-markdown'
@@ -56,6 +59,10 @@ Bundle 'lunaru/vim-twig'
 Bundle 'scrooloose/syntastic'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'joonty/vim-xdebug.git'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
 
 " Go lang
 set runtimepath+=$GOROOT/misc/vim
@@ -65,3 +72,8 @@ filetype plugin indent on
 au BufRead,BufNewFile *.ls set syntax=ls
 
 set ofu=syntaxcomplete#Complete
+
+au VimEnter * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

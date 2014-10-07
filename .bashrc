@@ -8,6 +8,9 @@ case $- in
       *) return;;
 esac
 
+# Where are my dotfiles?
+DOTFILES=~/dotfiles
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -177,3 +180,6 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+# Git prompt
+source $DOTFILES/bash-git-prompt/gitprompt.sh
