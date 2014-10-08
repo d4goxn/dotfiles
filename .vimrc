@@ -63,6 +63,8 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
+Bundle 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
 
 " Go lang
 set runtimepath+=$GOROOT/misc/vim
