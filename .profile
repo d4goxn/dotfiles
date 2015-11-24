@@ -16,13 +16,15 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+setxkbmap -option "caps:swapescape"
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-#xmodmap $HOME/.Xmodmap
+export NODE_REPL_HISTORY_FILE="/home/dan/.node-repl-history"
 
-export CHROME_BIN=/usr/bin/chromium-browser
-export NODE_ENV=development
-export GOROOT=/usr/local/go
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -1,0 +1,17 @@
+--sort-files
+--color
+
+--type-set=js=.js
+
+--ignore-dir=bower_components
+--ignore-dir=vendor
+--ignore-dir=node_modules
+--ignore-dir=dist
+--ignore-dir=build
+--ignore-dir=static
+--ignore-dir=.sass-cache
+
+--ignore-file=ext:map
+--ignore-file=ext:sql
+--ignore-file=ext:css
+--ignore-file=is:npm-debug.log

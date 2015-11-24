@@ -1,4 +1,7 @@
 set nocompatible
+
+let mapleader = ","
+
 let g:molokai_original=1
 colorscheme molokai
 
@@ -7,10 +10,9 @@ autocmd BufNewFile, BufRead * setlocal formatoptions-=c formatoptions-=r formato
 " Strip trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-set noexpandtab
-set tabstop=4 shiftwidth=4
+set tabstop=4 shiftwidth=4 softtabstop=0
 set encoding=utf8 ffs=unix,dos,mac
-set ruler noerrorbells novisualbell noswapfile nobackup nowb smarttab number
+set ruler noerrorbells novisualbell noswapfile nobackup nowb smarttab number noexpandtab
 
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 0
@@ -43,7 +45,6 @@ call vundle#rc()
 " let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
 
-Bundle 'plasticboy/vim-markdown'
 Bundle 'othree/html5.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'pangloss/vim-javascript'
@@ -64,7 +65,18 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'justmao945/vim-clang'
+Bundle 'rhysd/vim-clang-format'
 Plugin 'bling/vim-airline'
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 'ra' " Root dir is the git root, or the directory of the current file.
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|node_modules|bower_components)$',
+  \ }
 
 " Go lang
 set runtimepath+=$GOROOT/misc/vim
@@ -79,3 +91,18 @@ au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+au Syntax markdown setlocal spell spelllang=en_ca
+au FileType make set noexpandtab
+
+let g:syntastic_javascript_checkers = ['eslint', 'jscs']
+let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
