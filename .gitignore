@@ -3,3 +3,5 @@
 !.vim/bundle/vundle
 .npmrc
 bin
+/.vim/bundle-backup
+/.vim/bundle

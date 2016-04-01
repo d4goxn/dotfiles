@@ -195,3 +195,20 @@ export NVM_DIR="/home/dan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# path to the DCOS CLI binary
+if [[ "$PATH" != *"/home/dan/Demos/dcos/bin"* ]];
+  then export PATH=$PATH:/home/dan/Demos/dcos/bin;
+fi
+
+# path to the DCOS CLI binary
+if [[ "$PATH" != *"/home/dan/Demos/dcos-wapp/dcos/bin"* ]];
+  then export PATH=$PATH:/home/dan/Demos/dcos-wapp/dcos/bin;
+fi
+
+# path to the DCOS CLI binary
+if [[ "$PATH" != *"/home/dan/Demos/dcos-wapp/dcos/bin"* ]];
+  then export PATH=$PATH:/home/dan/Demos/dcos-wapp/dcos/bin;
+fi
+
+test "$(which gcalcli)" && gcalcli agenda --calendar daniel.ross@kasra.co

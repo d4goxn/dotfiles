@@ -6,9 +6,12 @@
 --ignore-dir=bower_components
 --ignore-dir=vendor
 --ignore-dir=node_modules
+--ignore-dir=lib
+--ignore-dir=python*
 --ignore-dir=dist
 --ignore-dir=build
 --ignore-dir=static
+--ignore-dir=coverage
 --ignore-dir=.sass-cache
 
 --ignore-file=ext:map
